@@ -146,3 +146,8 @@
 #pesquisa input[type="text"] {
     width: 200px
 }
+
+#mensagem-validacao{
+    color: black;
+    font-size: 25px;
+}
