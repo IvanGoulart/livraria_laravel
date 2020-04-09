@@ -23,7 +23,8 @@
                     <br>
                     <h4 id="center"><b>CADASTRO DOS DADOS DE AUTORES</b></h4>
                     <br> 
-                        
+                    <form method="POST" action="">
+                        {{ csrf_field() }}
                         <div class="col-md-6">              
                             <div class="form-group">
                                 <label for="name">Nome</label>
@@ -41,6 +42,7 @@
                                 Cadastrar
                             </button>
                         </div>
+                    </form>    
                 </div>
             </div>
         </div>

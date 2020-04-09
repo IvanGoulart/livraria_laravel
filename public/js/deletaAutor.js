@@ -1,11 +1,11 @@
 
 
-function gravaAutor(campo){
+/*function deletaAutor(campo){
     $.ajax({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
-        url: "/grava-autor",
+        url: "/destroy",
         type: "POST",
         dataType: 'json',
         data: {
@@ -22,6 +22,6 @@ function gravaAutor(campo){
         }
     });
 
-}
+}*/
 
 

@@ -19,18 +19,19 @@ class AutorController extends Controller
         return view('include-autor');
     }
 
-    public function teste(){
-        dd("OI");
-    }
-
 
     public function store(Request $request) {
 
-        dd("OI");
+       
+        $autor = $request->data['campo'];
         $product_autor = new Autor;
-        $product_autor->name = $request->name;
+        $product_autor->name = $autor;
         $product_autor->save();
-        return redirect()->route('autor.index')->with('message', 'Autor criada com sucesso!');
+
+        $resposta['success'] = true;
+
+        echo json_encode($resposta);
+
     }
 
     public function show($id) {

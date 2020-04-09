@@ -20,10 +20,11 @@
         <link href="{{URL::asset('css/lightbox.css')}}" rel="stylesheet" type="text/css" /> 
 
         <!-- JavaScript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="{{URL::asset('js/validaFormAutor.js')}}"></script>
         <script src="{{URL::asset('js/lightbox.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
     </head>
     <body>
 
@@ -89,7 +90,11 @@
         @yield('content')
 
     </body>
+    
     <script src="{{URL::asset('js/gravaAutor.js')}}"></script>
+    <script src="{{URL::asset('js/deletaAutor.js')}}"></script>
+    <script src="{{URL::asset('js/validaFormAutor.js')}}"></script>
+
 
 </html>
 

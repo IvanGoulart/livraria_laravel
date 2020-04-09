@@ -1,6 +1,7 @@
 
 
 
+    var botaodeletar = document.querySelector('#deletar-autor');
     var botaoadicionar = document.querySelector('#adicionar-autor');
 
     botaoadicionar.addEventListener('click', function(events){
@@ -14,22 +15,7 @@
         //Finção para validar
         validacao(campo);
         
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                  },
-                url: "/grava-autor",
-                type: "POST",
-                dataType: 'json',
-                data: {
-                    data: { campo: campo},
-                },
-                success: function(result){
-                    alert(result);
-                }
-            });
-
-        
+        gravaAutor(campo);
        
     })
 

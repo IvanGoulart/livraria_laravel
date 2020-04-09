@@ -17,4 +17,4 @@ Route::get('/', function () {
 Route::resource('product','ProdutoController');
 Route::resource('editora','EditoraController');
 Route::resource('autor','AutorController');
-Route::post('autor/grava-autor','AutorController@store');
+Route::post('/grava-autor','AutorController@store');
