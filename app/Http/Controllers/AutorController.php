@@ -19,7 +19,14 @@ class AutorController extends Controller
         return view('include-autor');
     }
 
+    public function teste(){
+        dd("OI");
+    }
+
+
     public function store(Request $request) {
+
+        dd("OI");
         $product_autor = new Autor;
         $product_autor->name = $request->name;
         $product_autor->save();
