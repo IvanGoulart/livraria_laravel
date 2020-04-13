@@ -1,7 +1,9 @@
 
 
-/*function deletaAutor(campo){
-    $.ajax({
+function deletaAutor(campo){
+
+    console.log("oi");
+  /*  $.ajax({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
@@ -20,8 +22,8 @@
         error: function(response) {
             console.log(response);
         }
-    });
+    });*/
 
-}*/
+}
 
 

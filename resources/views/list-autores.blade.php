@@ -46,7 +46,7 @@
                                 <tbody>
                                     @foreach($autores as $autor)
                                     <tr>
-                                        <td id="center">{{$autor->id}}</td>
+                                        <td id="id">{{$autor->id}}</td>
                                         <td title="Nome">{{$autor->name}}</td>
                                         <td id="center">
                                             <a href="{{route('autor.edit', $autor->id)}}" 
@@ -54,7 +54,9 @@
                                                data-placement="top"
                                                title="Alterar"><i class="fa fa-pencil"></i></a>
                                             &nbsp;
-                                            <form style="display: inline-block;" method=""  data-placement="top">
+                                            <form style="display: inline-block;" method="POST" 
+                                                        action=""                                                        
+                                                        title="Excluir">
                                             {{ csrf_field() }}
 
                                             <button type="submit" style="background-color: #fff" id="deletar-autor">
@@ -75,13 +77,4 @@
                  style="display: none;" 
                  alt="Ícone Subir ao Topo" 
                  title="Subir ao topo?">
-<script>
-    var botaodeletar = document.querySelector('#deletar-autor');
-    
-    botaodeletar.addEventListener('click', function(events){
-        event.preventDefault();
-        console.log("oi");
-        
-    });
 
-</script>
