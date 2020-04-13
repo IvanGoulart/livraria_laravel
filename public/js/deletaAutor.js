@@ -1,28 +1,42 @@
 
 
-function deletaAutor(campo){
+function deletaAutor(id){
 
-    console.log("oi");
-  /*  $.ajax({
+    console.log(id);
+    $.ajax({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
-        url: "/destroy",
+        url: "/deleta-autor",
         type: "POST",
         dataType: 'json',
         data: {
-            data: { campo: campo},
+            data: { id: id},
         },
         success: function(result){
 
             if(result.success == true){
-                window.location.href = "/autor";
+
+                var mensagem = document.querySelector('.mensagem-deletar');
+
+                mensagem.textContent = "";
+                mensagem.classList.remove("alert-warning");
+                    
+                mensagem.classList.add("alert-warning");
+    
+                mensagem.textContent = result.mensagem;
+        
+                setTimeout(function(){
+                    window.location.reload(1);
+                 }, 2000);
+
+                
             }
         },
         error: function(response) {
             console.log(response);
         }
-    });*/
+    });
 
 }
 

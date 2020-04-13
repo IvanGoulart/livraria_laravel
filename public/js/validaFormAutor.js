@@ -25,11 +25,10 @@
         botaodeletar.addEventListener('click', function(events){
             event.preventDefault();
 
-            var tdId = document.querySelector("#id");
+            var id = document.getElementById("id");
             
-            var id = tdId.textContent;
 
-            console.log(id);
+            deletaAutor(id);
             
         });
     }

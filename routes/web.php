@@ -18,3 +18,4 @@ Route::resource('product','ProdutoController');
 Route::resource('editora','EditoraController');
 Route::resource('autor','AutorController');
 Route::post('/grava-autor','AutorController@store');
+Route::post('/deleta-autor','AutorController@destroy');
