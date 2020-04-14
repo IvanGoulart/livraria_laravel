@@ -1,26 +1,22 @@
-
-
-
    
-    var botaoadicionar = document.querySelector('#adicionar-autor');
+    var botaoadicionar = document.querySelector('#adicionar-editora');
     if(botaoadicionar){
 
         botaoadicionar.addEventListener('click', function(events){
 
             event.preventDefault();
 
-            var formAutor = document.querySelector("#form-autor");
+            var campo = document.getElementById('form-editora').value;
 
-            var campo = document.getElementById('form-autor').value;
-
+            console.log(campo);
             //Finção para validar
             validacao(campo);
             
-            gravaAutor(campo);
+            gravaEditora(campo);
         
         })
     }
-    var botaodeletar = document.querySelector('#deletar-autor');
+    var botaodeletar = document.querySelector('#deletar-editora');
     if(botaodeletar){
         botaodeletar.addEventListener('click', function(events){
             event.preventDefault();
@@ -28,7 +24,7 @@
             var id = document.getElementById("id");
             
             if (confirm('Tem certeza que deseja excluir este registro?')) {
-                deletaAutor(id);
+                deletaEditora(id);
             }
             
         });
@@ -44,7 +40,7 @@
             
             mensagem.classList.add("alert-warning");
 
-            mensagem.textContent = "Digite um Autor";
+            mensagem.textContent = "Digite um Nome";
         }
 
     }

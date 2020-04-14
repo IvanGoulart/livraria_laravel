@@ -40,7 +40,7 @@ class AutorController extends Controller
 
     public function edit($id) {
         $product_autor = Autor::findOrFail($id);
-        return view('alter-autor', compact('product_autor'));
+        return view('include-autor', compact('product_autor'));
     }
 
     public function update(Request $request, $id) {

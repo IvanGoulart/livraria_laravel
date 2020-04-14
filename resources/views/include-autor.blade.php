@@ -29,7 +29,7 @@
                             <div class="form-group">
                                 <label for="name">Nome</label>
                                 <input type="text" name="autor" 
-                                       class="form-control" id="form-autor" value=""
+                                       class="form-control" id="form-autor" value="{{$product_autor->name or old('name')}}"
                                        required>
                             </div>
                         </div>
