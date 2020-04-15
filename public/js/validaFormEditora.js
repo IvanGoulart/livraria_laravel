@@ -16,19 +16,7 @@
         
         })
     }
-    var botaodeletar = document.querySelector('#deletar-editora');
-    if(botaodeletar){
-        botaodeletar.addEventListener('click', function(events){
-            event.preventDefault();
-
-            var id = document.getElementById("id");
-            
-            if (confirm('Tem certeza que deseja excluir este registro?')) {
-                deletaEditora(id);
-            }
-            
-        });
-    }
+   
     function validacao(campo){
 
         var mensagem = document.querySelector('#mensagem-validacao');

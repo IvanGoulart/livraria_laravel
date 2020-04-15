@@ -37,7 +37,7 @@ class EditoraController extends Controller
 
     public function edit($id) {
         $product_editora = Editora::findOrFail($id);
-        return view('alter-editora', compact('product_editora'));
+        return view('include-editora', compact('product_editora'));
     }
 
     public function update(Request $request, $id) {

@@ -28,7 +28,7 @@
                             <div class="form-group">
                                 <label for="name">Nome</label>
                                 <input type="text" name="name" 
-                                       class="form-control" id="form-editora"
+                                       class="form-control" id="form-editora" value="{{$product_editora->name or old('name')}}"
                                        required>
                             </div>
                         </div>

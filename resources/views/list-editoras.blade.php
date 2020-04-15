@@ -44,11 +44,17 @@
                                         <td title="Nome">{{$editora->name}}</td>
                                         <td id="center">
                                             &nbsp;
-                                            <form >                                    
+                                            <a href="{{route('editora.edit', $editora->id)}}" 
+                                               data-toggle="tooltip" 
+                                               data-placement="top"
+                                               title="Alterar"><i class="fa fa-pencil"></i></a>
+                                            &nbsp;
+
+                                                                                
                                                 <button type="submit" style="background-color: #fff" id="deletar-editora" onclick="deletaEditora( <?php echo $editora->id;?> )">
-                                                <a><i class="fa fa-trash-o"></i></a>                                                    
+                                                    <a><i class="fa fa-trash-o"></i></a>                                                    
                                                 </button>
-                                            </form>    
+                                              
                                     </tr>
                                     @endforeach
                                 </tbody>
