@@ -23,16 +23,23 @@ class ProdutoController extends Controller
     }
 
     public function store(Request $request) {
-        $product = new Produto;
 
-        $editora = Editora::findOrFail($request->editora_id);
-        //$product->editora()->associate($editora);
-        //$product->name = $request->name;
-        $product->create($request->all());
-        // dd($editora);
+        $nome = $request->data['campo'];
+        $editora = $request->data['editora'];
+        $autor = $request->data['autor'];
         
-        //$product->save();
-        return redirect()->route('product.index')->with('message', 'Produto criado com sucesso!');
+        $livro = new Produto;
+
+        $livro->name = $nome;
+        $livro->editora_id = $editora;
+        $livro->autor_id = $autor;
+
+        $livro->save();
+
+        $resposta['success'] = true;
+
+        echo json_encode($resposta);
+
     }
 
     public function show($id) {

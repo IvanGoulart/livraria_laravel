@@ -23,3 +23,6 @@ Route::post('/deleta-autor','AutorController@destroy');
 
 Route::post('/grava-editora','EditoraController@store');
 Route::post('/deleta-editora','EditoraController@destroy');
+
+Route::post('/grava-livro','ProdutoController@store');
+

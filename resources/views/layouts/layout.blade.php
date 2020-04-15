@@ -92,13 +92,16 @@
     
     <script src="{{URL::asset('js/gravaAutor.js')}}"></script>
     <script src="{{URL::asset('js/gravaEditora.js')}}"></script>
+    <script src="{{URL::asset('js/gravaLivro.js')}}"></script>
 
     <script src="{{URL::asset('js/deletaAutor.js')}}"></script>
     <script src="{{URL::asset('js/deletaEditora.js')}}"></script>
 
     <script src="{{URL::asset('js/validaFormAutor.js')}}"></script>
     <script src="{{URL::asset('js/validaFormEditora.js')}}"></script>
+    <script src="{{URL::asset('js/validaFormLivro.js')}}"></script>
 
+    <script src="{{URL::asset('js/validacao.js')}}"></script>
 
 </html>
 
