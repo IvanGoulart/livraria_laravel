@@ -51,7 +51,7 @@
                                             &nbsp;
 
                                                                                 
-                                                <button type="submit" style="background-color: #fff" id="deletar-editora" onclick="deletaEditora( <?php echo $editora->id;?> )">
+                                                <button type="submit" style="background-color: #fff" id="deletar-editora">
                                                     <a><i class="fa fa-trash-o"></i></a>                                                    
                                                 </button>
                                               

@@ -2,10 +2,13 @@
 
 function deletaEditora(id){
 
+    
     console.log(id);
 
     if(confirm("Deseja excluir este rigistro?")){
-        $.ajax({
+
+       
+        return $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
@@ -28,16 +31,15 @@ function deletaEditora(id){
         
                     mensagem.textContent = result.mensagem;
             
-                    setTimeout(function(){
-                        window.location.reload(1);
-                    }, 2000);
-                    
+                  
+                   
                 }
             },
             error: function(response) {
                 console.log(response);
             }
         });
+        
     }
 }
 

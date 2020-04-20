@@ -50,7 +50,7 @@
                             <tbody>
                                 @foreach($produtos as $produto)
                                 <tr>
-                                    <td id="center">{{$produto->id}}</td>
+                                    <td class="fadeOut" id="center">{{$produto->id}}</td>
                                     <td title="Nome">{{$produto->name}}</td>
                                     <td title="EditoraNome">{{$produto->editora->name}}</td>
                                     <td title="EditoraNome">{{$produto->autor->name}}</td>

@@ -155,3 +155,6 @@
 .center{
     text-align: center;
 }
+.exluirTR{
+    display: none !important;
+}
