@@ -28,9 +28,15 @@ function deletaEditora(id){
                     mensagem.classList.remove("alert-warning");
                         
                     mensagem.classList.add("alert-warning");
+
+
+                    $("#linha"+id).remove();
         
                     mensagem.textContent = result.mensagem;
-            
+                    setTimeout(function(){
+                        window.location.reload(1);
+                    }, 1000);
+
                   
                    
                 }

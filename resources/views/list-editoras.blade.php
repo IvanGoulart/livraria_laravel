@@ -23,6 +23,8 @@
                         </div>
                     </div>           
                 </div>
+
+                <div class="container">
                 <div class="row">
                     <div class="col-md-12">   
                         <br />
@@ -51,9 +53,9 @@
                                             &nbsp;
 
                                                                                 
-                                                <button type="submit" style="background-color: #fff" id="deletar-editora">
-                                                    <a><i class="fa fa-trash-o"></i></a>                                                    
-                                                </button>
+                                            <button type="submit" style="background-color: #fff" id="deletar-autor" onclick="deletaEditora( <?php echo $editora->id;?> )">
+                                                <a><i class="fa fa-trash-o"></i></a>                                                    
+                                            </button>
                                               
                                     </tr>
                                     @endforeach
@@ -61,7 +63,8 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                    </div>
+                    </div>
             </div>
             <img src="{{URL::asset('img/subir.png')}}" 
                  id="up" 

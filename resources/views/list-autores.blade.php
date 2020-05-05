@@ -42,7 +42,7 @@
 
                                     <div class="autores">
                                     @foreach($autores as $autor)
-                                    <tr>
+                                    <tr id="linha<?= $autor->id ?>">
                                         <td class="center" id="{{$autor->id}}">{{$autor->id}}</td>
                                         <td title="Nome">{{$autor->name}}</td>
                                         <td id="center">
