@@ -18,10 +18,17 @@ class EditoraController extends Controller
     }
 
     public function store(Request $request) {
+
+       
+        $editora = $request->data['campo'];
         $product_editora = new Editora;
-        $product_editora->name = $request->name;
+        $product_editora->name = $editora;
         $product_editora->save();
-        return redirect()->route('editora.index')->with('message', 'Editora criada com sucesso!');
+
+        $resposta['success'] = true;
+
+        echo json_encode($resposta);
+
     }
 
     public function show($id) {
@@ -30,7 +37,7 @@ class EditoraController extends Controller
 
     public function edit($id) {
         $product_editora = Editora::findOrFail($id);
-        return view('alter-editora', compact('product_editora'));
+        return view('include-editora', compact('product_editora'));
     }
 
     public function update(Request $request, $id) {
@@ -40,10 +47,19 @@ class EditoraController extends Controller
         return redirect()->route('editora.index')->with('message', 'Editora alterado com sucesso!');
     }
 
-    public function destroy($id) {
-        $product_editora = Editora::findOrFail($id);
-        $product_editora->delete();
-        return redirect()->route('editora.index')->with('message', 'Editora excluído com sucesso!');
+    public function destroy(Request $request) {
+
+        $id = $request->data['id'];
+
+        $autor = Editora::findOrFail($id);
+        $autor->delete();
+        
+
+        $resposta['success'] = true;
+        $resposta['mensagem'] = "Excluido com sucesso";
+
+        echo json_encode($resposta);
+
     }
 
 }

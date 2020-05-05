@@ -40,7 +40,7 @@ class AutorController extends Controller
 
     public function edit($id) {
         $product_autor = Autor::findOrFail($id);
-        return view('alter-autor', compact('product_autor'));
+        return view('include-autor', compact('product_autor'));
     }
 
     public function update(Request $request, $id) {
@@ -50,10 +50,19 @@ class AutorController extends Controller
         return redirect()->route('autor.index')->with('message', 'Autor alterado com sucesso!');
     }
 
-    public function destroy($id) {
-        $product_autor = Autor::findOrFail($id);
-        $product_autor->delete();
-        return redirect()->route('autor.index')->with('message', 'Autor excluído com sucesso!');
+    public function destroy(Request $request) {
+
+        $id = $request->data['id'];
+
+        $autor = Autor::findOrFail($id);
+        $autor->delete();
+        
+
+        $resposta['success'] = true;
+        $resposta['mensagem'] = "Excluido com sucesso";
+
+        echo json_encode($resposta);
+
     }
 
 

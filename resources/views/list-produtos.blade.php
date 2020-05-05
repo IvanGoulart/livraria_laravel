@@ -50,7 +50,7 @@
                             <tbody>
                                 @foreach($produtos as $produto)
                                 <tr>
-                                    <td id="center">{{$produto->id}}</td>
+                                    <td class="fadeOut" id="center">{{$produto->id}}</td>
                                     <td title="Nome">{{$produto->name}}</td>
                                     <td title="EditoraNome">{{$produto->editora->name}}</td>
                                     <td title="EditoraNome">{{$produto->autor->name}}</td>
@@ -59,15 +59,12 @@
                                             data-toggle="tooltip" 
                                             data-placement="top"
                                             title="Alterar"><i class="fa fa-pencil"></i></a>
-                                        &nbsp;<form style="display: inline-block;" method="POST" 
-                                                    action="{{route('product.destroy', $produto->id)}}"                                                        
-                                                    data-toggle="tooltip" data-placement="top"
-                                                    title="Excluir" 
-                                                    onsubmit="return confirm('Confirma exclusão?')">
-                                            {{method_field('DELETE')}}{{ csrf_field() }}                                                
-                                            <button type="submit" style="background-color: #fff">
-                                                <a><i class="fa fa-trash-o"></i></a>                                                    
-                                            </button></form></td>               
+                                        &nbsp;
+
+                                        <button type="submit" style="background-color: #fff" id="grava-livro">
+                                            <a><i class="fa fa-trash-o"></i></a>                                                    
+                                        </button>
+                                    </td>               
                                 </tr>
                                 @endforeach
                             </tbody>

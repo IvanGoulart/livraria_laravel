@@ -1,13 +1,18 @@
 
 
-function deletaAutor(id){
-    if (confirm('Tem certeza que deseja excluir este registro?')) {
-        console.log(id);
-        $.ajax({
+function deletaEditora(id){
+
+    
+    console.log(id);
+
+    if(confirm("Deseja excluir este rigistro?")){
+
+       
+        return $.ajax({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: "/deleta-autor",
+            url: "/deleta-editora",
             type: "POST",
             dataType: 'json',
             data: {
@@ -26,17 +31,15 @@ function deletaAutor(id){
         
                     mensagem.textContent = result.mensagem;
             
-                    setTimeout(function(){
-                        window.location.reload(1);
-                    }, 2000);
-
-                    
+                  
+                   
                 }
             },
             error: function(response) {
                 console.log(response);
             }
         });
+        
     }
 }
 

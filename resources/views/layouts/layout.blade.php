@@ -23,7 +23,6 @@
         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="{{URL::asset('js/lightbox.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
     </head>
     <body>
@@ -92,9 +91,17 @@
     </body>
     
     <script src="{{URL::asset('js/gravaAutor.js')}}"></script>
-    <script src="{{URL::asset('js/deletaAutor.js')}}"></script>
-    <script src="{{URL::asset('js/validaFormAutor.js')}}"></script>
+    <script src="{{URL::asset('js/gravaEditora.js')}}"></script>
+    <script src="{{URL::asset('js/gravaLivro.js')}}"></script>
 
+    <script src="{{URL::asset('js/deletaAutor.js')}}"></script>
+    <script src="{{URL::asset('js/deletaEditora.js')}}"></script>
+
+    <script src="{{URL::asset('js/validaFormAutor.js')}}"></script>
+    <script src="{{URL::asset('js/validaFormEditora.js')}}"></script>
+    <script src="{{URL::asset('js/validaFormLivro.js')}}"></script>
+
+    <script src="{{URL::asset('js/validacao.js')}}"></script>
 
 </html>
 
