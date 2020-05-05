@@ -29,6 +29,7 @@
                         </div>
                     </div>           
                 </div>
+                <div class="container">
                 <div class="row">
                     <div class="col-md-12">   
                         <br />
@@ -70,6 +71,7 @@
                             </table>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             <img src="{{URL::asset('img/subir.png')}}" 
